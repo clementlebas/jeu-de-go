@@ -1,0 +1,82 @@
+
+#onglets{
+	margin: 2em auto;
+    position: absolute;
+    background-color: transparent;
+    width: 250px;
+    top: 10px;
+    left: 10px;
+    color: wheat; 
+    
+}
+@font-face {
+	font-family: "china";
+	src: url('Morning Calm.ttf');
+}
+#onglets-menu 
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#onglets-menu li 
+{
+	float: left;
+	font-family: 'china';
+	background: linear-gradient(220deg, transparent 10px, wheat 11px);
+	color: black;
+	padding: 12px 20px 15px 20px;
+	font-weight: bold;
+	font-size: 14px;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+	cursor: pointer;
+}
+
+#onglets-menu li:hover 
+{
+	background: linear-gradient(220deg, transparent 10px, rgb(207, 188, 151) 11px);
+}
+
+#onglets-menu .menu-actif
+{
+	background: linear-gradient(220deg, transparent 10px, black 11px);
+	color: wheat;
+	text-shadow: none;
+}
+
+/* Forcer à rester blanc quand la souris passe sur le menu actif */
+#onglets-menu .menu-actif:hover
+{
+	
+	background: linear-gradient(220deg, transparent 10px, black 11px);
+}
+
+
+#onglets-contenu 
+{
+	clear: both;
+	background-color: black;
+	border-radius: 0 2px 2px 2px;
+	box-shadow: 0 2px 2px #000;
+	width: 94%;
+}
+
+#onglets-contenu>div 
+{
+	display: none;
+	padding: 10px;
+	margin-bottom: 5%;
+}
+
+#onglets-contenu>.contenu-actif
+{
+	display: block;
+	
+}
+
+#onglets-contenu>div>*:first-child
+{
+	margin-top: 0;
+}

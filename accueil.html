@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JEU DE GO</title>
+    <link rel="stylesheet" type="text/css" href="./css/jeudeGO.css" />
+    <link rel="stylesheet" type="text/css" href="./css/onglets.css" />
+    <script src="./jquery/jquery.js"></script>
+    <script src="./jquery/jquery-ui.min.js"></script>
+    <script src="./js/jeudeGO.js"></script>
+
+    <script src="./js/tailleGoban.js"></script>
+    <script src="./js/chrono.js"></script>
+    <script src="./js/onglets.js"></script>
+    
+</head>
+<body>
+
+    <h3> Jeu de GO </h3>
+    
+<!------------------------------->
+    <div id="onglets">
+        <ul id="onglets-menu">
+            <li class="menu-actif">Tableau de bord</li>
+            <li >Règles</li>
+        </ul>
+    
+        <div id="onglets-contenu">
+            <div class="contenu-actif">
+                
+                <h4>
+                    Taille du Goban:
+                </h4>
+                <div class="tailleGoban">
+                    <button class="neuf">9x9</button>
+                    <button class="treize">13x13</button>
+                    <button class="dixneuf">19x19</button>
+                </div>
+
+                <h4>
+                    Nombres de coups joués:
+                </h4>
+                <p class="compteurBlanche">
+                     Joueur pierre blanche: 0
+                </p>
+                <p class="compteurNoir">
+                    Joueur pierre noire: 0
+                </p>
+            
+                
+                <h4 class='chrono'>
+                    Chronomètre:
+                </h4>
+                    <p>Joueur pierre blanche:
+                        
+                    </p>
+                    <t class="tmpB"></t>
+                    <span id="CronoB">0</span>
+                    <p>
+                        Joueur pierre noire:
+                    </p>
+                    <t class="tmpN"></t>
+                        
+                        <span id="CronoN">0</span>
+                    
+                    
+                <h4>
+                    Comment jouer ?
+                </h4>
+                <p>Les pierres noires commencent. Chaque joueur joue à tour de rôle et place les pierres en cliquant sur les angles du Goban. <br> 
+                    Si des pierres sont capturées, il faut les déplacer dans le bol situé en bas à droite de l'écran. <br>
+                    Si les deux joueurs passent leurs tours consécutivement, la partie est terminée.</p>
+            </div>
+            <div>
+                <p>
+                    Le go oppose deux adversaires, Noir — qui joue toujours en premier — et Blanc, qui jouent leur tour successivement.Les pierres de même couleur qui sont directement adjacentes en suivant les lignes de la grille (une pierre a donc au plus
+                    quatre voisines) sont dites connectées et forment une chaîne. On appelle libertés les intersections vides immédiatement adjacentes
+                    à une chaîne de pierres.
+                </p>
+                <p>
+                    Une pierre isolée ou plus généralement une chaine qui ne possède plus qu'une seule liberté est dit un atari. Si la chaîne
+                    perd cette dernière liberté, elle est capturée. La chaine complète est retirée du goban et ajoutée au tas de prisonniers
+                    du joueur adverse. <br> Si aucun des joueurs n'a abandonné, la partie se termine après que les deux joueurs ont passé consécutivement. On comptabilise
+                    alors les points de chacun. Celui qui possède le plus de points gagne.</p>
+            </div>
+            
+        </div>
+    </div>
+    
+<!-------------------------->
+
+    <img src="./image/boiteNoir.png" alt=""class="boiteNoir">
+
+
+
+    <table id="gobanC">
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+    
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+   
+    
+    
+    <table id="goban">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>        
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>        </tr>
+    
+        <tr>
+            <td></td>
+            <td></td>
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+
+            <td></td>
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+            <td></td>
+
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+            <td></td>        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+
+            <td></td>
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+            <td></td>
+
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+            <td></td>        
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>        
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+
+            <td></td>
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+            <td></td>
+
+            <td><img class="hoshi" src="./image/hoshi.png" alt=""></td>
+            <td></td>        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>        
+        </tr>
+       
+    </table>
+    <button id="passe">PASSE</button>
+    <button class="reset" type="reset">RESET</button>
+
+    <!--<div id="dialog" title="Fin de la partie !">
+        <p>La partie est terminé !</p>
+    </div>-->
+    
+</body>
+</html>

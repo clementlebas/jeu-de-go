@@ -1,0 +1,125 @@
+/*canvas{
+    border: 3px firebrick solid;
+    width:600px; 
+    height:400px; 
+    margin: auto; centrer le canvas
+    display: block;  margin fonctionne seulement si canvas en block 
+}*/
+
+body{
+    margin: 5% 0 0 0;
+    padding: 0;
+    background-image: url('../image/bkg-lino.jpg');
+}
+h3{
+    position: absolute;
+    top:0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    color: wheat;
+    font-family: china;
+}
+
+h4{
+    font-size: 15px;
+    font-family: china;
+}
+@font-face {
+	font-family: "china";
+	src: url('../police/Morning Calm.ttf');
+}
+
+p{
+    font-size: 13px;
+}
+.blanche,.noir{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    z-index:10;
+
+}
+
+.boiteNoir{
+    
+position:absolute; 
+bottom:0; 
+right: 0;  
+width: 20%;
+height: 40%;
+}
+
+.hoshi{
+    height: 10px;
+    width: 10px;
+    /*position hoshi*/
+    float: left;
+    margin-top: -65%;
+    margin-left:-16%;
+    position: static;
+}
+
+
+#goban td{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+   
+}
+
+#goban{
+    border-collapse: collapse; /*border collé*/
+    margin:6.4% auto; 
+    margin-bottom: 50px;
+    border:2px solid black;
+    background-image: url('../image/goban.jpg');
+    background-size: contain;
+     
+    
+}
+
+
+#gobanC{
+    border-collapse: collapse; /*border collé*/
+    margin: auto;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#gobanC td{
+    width: 40px;
+    height: 40px;
+    border: 1px dashed transparent;
+    text-align: center; 
+    z-index:1;
+}
+#gobanC td:hover
+{
+    background-color: ghostwhite;
+    opacity: 0.5;
+    
+}
+
+    .nohover a:hover { background-color: transparent; }
+
+
+.reset,#passe{
+    margin: auto;
+    display: block;
+}
+#goban td{
+    background-color: transparent;
+}
+
+
+
+/*img{
+    background-image: url(goban9x9.png);    
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}*/
