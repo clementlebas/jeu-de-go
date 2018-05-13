@@ -75,6 +75,7 @@ height: 40%;
     border:2px solid black;
     background-image: url('../image/goban.jpg');
     background-size: contain;
+
      
     
 }
@@ -82,12 +83,18 @@ height: 40%;
 
 #gobanC{
     border-collapse: collapse; /*border collé*/
-    margin: auto;
+    /* centrer pour tout les navigateurs*/
+    width: 400px;
     position: absolute;
     top: 10%;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    left: 50%;
+    margin-left: -200px;/* la moitié de 400px*/
+    
+   
+    
+}
+#gobanC>tbody{
+
 }
 
 #gobanC td{
